@@ -1,0 +1,34 @@
+
+.contactsPageWrapper{
+ 
+  justify-content: space-around;
+  background-color: black; 
+}
+
+.contactsFormWrapper{
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #a4dd1d;
+}
+
+.contactsListWrapper{
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #a4dd1d;
+}
+
+.pageTitle{
+  margin-bottom: 6px;
+  font-size: 28px;
+} 
+
+.contactsTitle{
+  margin-bottom: 6px;
+  font-size: 28px;
+}
+
+.loaderText{
+  margin-bottom: 6px;
+}

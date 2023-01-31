@@ -1,0 +1,21 @@
+
+.listNav {
+  display: flex;
+  margin-right: 20px; 
+}
+
+.itemNav {
+  margin-right: 20px;
+}
+.itemNav:last-child {
+    margin-right: 0;
+}
+
+.linkNav {
+color: #fff;
+}
+  
+.linkNav:hover,
+.linkNav:focus{
+color: #a4dd1d;
+}

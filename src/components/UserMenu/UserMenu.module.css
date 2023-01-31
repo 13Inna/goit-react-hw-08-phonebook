@@ -1,0 +1,25 @@
+
+.menuWrapper{ 
+  display: flex;
+  gap: 10px;
+  color: #a4dd1d;
+  text-align: right;
+}
+
+  
+.menuWrapper:last-child {
+  margin-right: 10px;
+}
+
+
+.menuButton{
+  display: block;
+  background-color: #a4dd1d;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+
+.userName{
+  font-size: 16px;
+}

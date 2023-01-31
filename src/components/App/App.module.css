@@ -1,0 +1,26 @@
+.container {
+  min-height: 200px;
+  display: grid;
+  align-items: center;
+  margin: 0 auto;
+  width: 600px;
+
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.wrapper { 
+  padding-top: 330px; 
+  padding-bottom: 220px;
+  background-image: url('../../images/bg1.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.footer {
+  color: rgb(15, 15, 15);
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(159, 221, 162);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px - 23px rgba(0, 0, 0, 0.8),
+  23px 0 20px - 23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
