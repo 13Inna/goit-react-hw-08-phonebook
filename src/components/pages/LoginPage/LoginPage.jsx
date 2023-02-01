@@ -9,7 +9,6 @@ import { getAuthError } from 'redux/selector';
 export const LoginPage = () => {
   const error = useSelector(getAuthError);
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,9 +16,6 @@ export const LoginPage = () => {
     const name = e.target.name;
     const value = e.target.value;
     switch (name) {
-      case 'inputName':
-        setName(value);
-        break;
 
       case 'inputEmail':
         setEmail(value);
@@ -36,16 +32,14 @@ export const LoginPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(logIn({ name, email, password }));
+    dispatch(logIn({ email, password }));
     if (error) {
-      return;
+      return alert(`Something went wrong, try again!`);
     }
-    setName('');
     setEmail('');
     setPassword('');
   };
-//используем useMemo для оптимизации
-  const nameInputId = useMemo(()=> nanoid(), []);
+
   const emailInputId = useMemo(()=> nanoid(), []);
   const passwordInputId = useMemo(()=> nanoid(), []);
 
@@ -53,17 +47,9 @@ export const LoginPage = () => {
     <>
       <div className={css.logWrapper}>
         <h1 className={css.logTitle}>Login, please</h1>
-        {error && <p className={css.logTitle}>Something went wrong, try again!</p>}
+        
         <form className={css.loginForm} onSubmit={handleSubmit}>
-          <label className={css.formLabel} htmlFor="nameInputId">Name</label>
-          <input className={css.formInput}
-            type="text"
-            name="inputName"
-            value={name}
-            onChange={handleChange}
-            id={nameInputId}
-          />
-
+          
           <label className={css.formLabel} ormLabel htmlFor="emailInputId">Email</label>
           <input className={css.formInput}
             type="email"

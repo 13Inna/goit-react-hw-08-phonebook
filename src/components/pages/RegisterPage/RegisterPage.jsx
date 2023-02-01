@@ -1,13 +1,11 @@
 import { useState, useMemo } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { nanoid } from 'nanoid';
 import { register } from 'redux/operations';
 import css from '../RegisterPage/RegisterPage.module.css';
 
-import { getAuthError } from 'redux/selector';
 
 export const RegisterPage = () => {
-  const error = useSelector(getAuthError);
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -49,7 +47,6 @@ export const RegisterPage = () => {
   return (
     <div className={css.regWrapper}>
       <h1 className={css.regTitle}>Have no account? Sign up!</h1>
-      {error && <p className={css.errorText}>Something went wrong, try again!</p>}
       <form className={css.registerForm} onSubmit={handleSubmit}>
         <label className={css.formLabel} htmlFor="nameInputId">Name</label>
         <input className={css.formInput}
